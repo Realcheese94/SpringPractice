@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id ="student1" class="com.javalec.ex1.Student">
+<constructor-arg value="홍길동"></constructor-arg>
+<constructor-arg value="홍짱"></constructor-arg>
+<constructor-arg value="서울시 노원구"></constructor-arg>
+<constructor-arg value="3"></constructor-arg>
+
+</bean>
+<bean id ="student2" class="com.javalec.ex1.Student">
+<constructor-arg value="김또깡"></constructor-arg>
+<constructor-arg value="김돤"></constructor-arg>
+<constructor-arg value="서울시 종로구"></constructor-arg>
+<constructor-arg value="1"></constructor-arg>
+
+</bean>
+<bean id ="studentinfo" class ="com.javalec.ex1.StudentInfo">
+<constructor-arg>
+<ref bean="student1"></ref>
+</constructor-arg>
+
+</bean>
+
+</beans>

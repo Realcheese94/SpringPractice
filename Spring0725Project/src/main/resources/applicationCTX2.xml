@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id ="bmiCalculator" class ="com.javaex.lec.BMICalculator">
+			
+			<property name = "overweight">
+				<value>90</value>
+			</property>
+			<property name = "lowweight">
+				<value>70</value>
+			</property>
+		</bean>
+		
+		<bean id ="myinfo" class="com.javaex.lec.MyInfo">
+		<property name ="name">
+			<value>ksy</value>
+		</property>
+		<property name ="height">
+			<value>180</value>
+		</property>
+		<property name ="weight">
+			<value>89</value>
+		</property>
+		<property name ="hobbys">
+			<list>
+				<value>수영</value>
+				<value>독서</value>
+				<value>영화시청</value>
+			</list>
+		</property>
+		<property name ="bmiCalculator">
+			<ref bean="bmiCalculator"/>
+		</property>
+		
+		</bean>
+		
+		
+</beans>

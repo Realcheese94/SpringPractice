@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id ="student3" class="com.java.lec1.Student">
+<constructor-arg value="김우두"/>
+<constructor-arg value="25"/>
+<constructor-arg>
+<list>
+	<value>축구</value>
+	<value>힙합</value>
+	<value>발라드</value>
+</list>
+</constructor-arg>
+<property name="weight" value="34"/>
+<property name="height" value="154"/>
+</bean>
+
+<bean id ="family1" class="com.java.lec1.Family" c:papaname="아빠1" c:maminame="엄마1" p:sisname="여동생1">
+<property name="broname" value="형님1"></property>
+</bean>
+</beans>
