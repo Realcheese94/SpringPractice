@@ -13,5 +13,8 @@ public static void main(String[] args) {
 	Icecream icecream2 = aac.getBean("ice2",Icecream.class);
 	icecream2.talkname();
 	icecream2.tasteice();
+	
+	IcecreamInfo icecreamInfo = aac.getBean("iceinfo",IcecreamInfo.class);
+	icecreamInfo.getinfo();
 }
 }
