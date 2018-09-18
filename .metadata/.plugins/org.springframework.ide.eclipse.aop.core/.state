@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="Spring0725Project"/>
+<aop-project name="Spring0918Project"/>
 <aop-project name="Spring0721Project"/>
 <aop-project name="Spring0728Project"/>
 <aop-project name="Spring0916Project"/>

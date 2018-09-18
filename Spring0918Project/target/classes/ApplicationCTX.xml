@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id ="ice1" class="practice1.bananaicecream">
+<constructor-arg value="바나나맛"/>
+<constructor-arg value="300won"/>
+</bean>
+
+<bean id ="ice2" class="practice1.strawicecream">
+<property name="name" value="딸기맛"/>
+<property name="price" value="500won"/>
+</bean>
+</beans>
