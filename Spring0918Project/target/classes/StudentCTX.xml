@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="student1" class="practice3.Student">
+<constructor-arg value="홍길동"/>
+<constructor-arg value="30"/>
+</bean>
+<bean id="otherstudent" class="practice3.OtherStudent">
+<constructor-arg value="김가네"/>
+<constructor-arg value="20"/>
+</bean>
+
+
+</beans>
