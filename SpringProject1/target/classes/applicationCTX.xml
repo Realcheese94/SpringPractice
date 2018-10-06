@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+<bean id="logAOP" class="com.spring2.LogAOP"/>
+<bean id="logAOP2" class="com.spring2.LogAop2"/>
+<aop:config>
+	<aop:aspect id ="logger" ref="logAOP">
+		<aop:pointcut id="publicM" expression="within(com.spring2.*)"/>
+		<aop:around method="loggerAop" pointcut-ref="publicM"/>
+	</aop:aspect>
+</aop:config>
+
+<aop:config>
+	<aop:aspect id="logger2" ref="logAOP2">
+		<aop:pointcut id="publicC" expression="within(com.spring2.*)"/>
+		<aop:around method="loggerAop3" pointcut-ref="publicC"/>
+	</aop:aspect>
+</aop:config>
+
+
+<bean id ="student" class="com.spring2.Student">
+<property name="name" value="홍길동"/>
+<property name="classNum" value="5"/>
+<property name="gradeNume" value="2"/>
+</bean>
+
+<bean id="worker" class="com.spring2.Worker">
+<property name="name" value="김갑수"/>
+<property name="departname" value="영업"/>
+<property name="tel" value="0222033"/>
+</bean>
+</beans>

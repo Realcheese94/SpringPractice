@@ -1,5 +1,0 @@
-package pencil;
-
-public interface Pencil {
-
-}
