@@ -4,7 +4,9 @@
 	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+<aop:aspectj-autoproxy/>
 
+<bean id="loggerAOP3" class = "com.spring3.LogAOP"/>
 <bean id="logAOP" class="com.spring2.LogAOP"/>
 <bean id="logAOP2" class="com.spring2.LogAop2"/>
 <aop:config>
@@ -21,7 +23,6 @@
 	</aop:aspect>
 </aop:config>
 
-
 <bean id ="student" class="com.spring2.Student">
 <property name="name" value="홍길동"/>
 <property name="classNum" value="5"/>
@@ -33,4 +34,15 @@
 <property name="departname" value="영업"/>
 <property name="tel" value="0222033"/>
 </bean>
+
+<bean id="student3" class="com.spring3.Student">
+<property name="name" value="홍길동"/>
+<property name="age" value="23"/>
+</bean> 
+
+<bean id="worker3" class="com.spring3.Worker">
+<property name="name" value="길기갑"/>
+<property name="age" value="55"/>
+</bean>
+
 </beans>
